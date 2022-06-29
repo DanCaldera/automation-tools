@@ -56,7 +56,7 @@ const backup = () => {
 // 0 0 * * * Every Day
 const startSchedule = () => {
   cron.schedule(
-    '* * * * *',
+    '0 0 * * *',
     () => {
       backup()
     },
