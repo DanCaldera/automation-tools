@@ -1,3 +1,5 @@
+// https://soshace.com/automated-postgresql-backups-with-nodejs-and-bash/
+
 const { execute } = require('@getvim/execute')
 const compress = require('gzipme')
 const fs = require('fs')

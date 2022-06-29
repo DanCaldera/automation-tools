@@ -4,6 +4,7 @@
   "description": "automated-postgresql-backups-with-nodejs-and-bash",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "backup": "node backup.js",
     "restore": "node restore.js",
     "test": "echo \"Error: no test specified\" && exit 1"
