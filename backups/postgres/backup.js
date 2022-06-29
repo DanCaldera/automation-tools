@@ -16,7 +16,7 @@ const currentDate = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate
 const backupFile = `pg-backup-${currentDate}.tar`
 
 const backup = () => {
-  execute(`pg_dump 'postgres://${user}:${pass}@${host}:${port}/${name}' -f ${backupFile} -F t`)
+  execute(`pg_dump 'postgres://${user}:${pass}@${host}:${port}/${name}' -f ${backupFile}`)
     .then(async () => {
       await compress(backupFile)
       fs.unlinkSync(backupFile)

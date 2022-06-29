@@ -4,6 +4,8 @@
   "description": "automated-postgresql-backups-with-nodejs-and-bash",
   "main": "index.js",
   "scripts": {
+    "backup": "node backup.js",
+    "restore": "node restore.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +14,7 @@
   "dependencies": {
     "@getvim/execute": "^1.0.0",
     "dotenv": "^16.0.1",
+    "gunzip-file": "^0.1.1",
     "gzipme": "^1.0.0",
     "node-cron": "^3.0.1"
   }
