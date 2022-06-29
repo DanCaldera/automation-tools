@@ -19,6 +19,7 @@ const s3_bucket = process.env.S3_BUCKET
 
 var currentDate, backupFile, backupFileGz
 
+// https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 // https://codingsight.com/upload-files-to-aws-s3-with-the-aws-cli/
 const s3Upload = () => {
   execute(`aws s3 cp ${backupFileGz} s3://${s3_bucket}/`)
