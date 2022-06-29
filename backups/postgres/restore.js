@@ -15,6 +15,10 @@ const args = process.argv.slice(2)
 
 function restore() {
   const compressedBackupFile = args[0]
+  if (!compressedBackupFile) {
+    console.log('No backup file provided')
+    return 1
+  }
   const tempBackupUncompressedFile = compressedBackupFile.replace('.gz', '')
   gunzip(compressedBackupFile, tempBackupUncompressedFile, () => {
     execute(`psql 'postgres://${user}:${pass}@${host}:${port}/${name}' < ${tempBackupUncompressedFile}`)

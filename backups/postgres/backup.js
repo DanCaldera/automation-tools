@@ -29,4 +29,4 @@ const backup = () => {
     })
 }
 
-backup()
+module.exports = backup
