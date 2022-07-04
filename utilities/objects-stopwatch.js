@@ -34,4 +34,4 @@ function StopWatch() {
   })
 }
 
-const sw = new StopWatch()
+const swo = new StopWatch()

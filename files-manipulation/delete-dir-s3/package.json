@@ -1,0 +1,19 @@
+{
+  "name": "delete-dir-s3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/index.min.js",
+    "build": "babel src -d lib",
+    "ugly": "uglifyjs lib/index.js -o lib/index.min.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1167.0",
+    "dotenv": "^16.0.1"
+  },
+  "devDependencies": {}
+}
