@@ -3,8 +3,8 @@ require('dotenv').config()
 
 async function s3DeleteDir(params) {
   const s3 = new S3({
-    accessKeyId: process.env.S3_UPLOAD_KEY,
-    secretAccessKey: process.env.S3_UPLOAD_SECRET
+    accessKeyId: process.env.AWS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
   })
 
   const list = await s3.listObjects(params).promise()
@@ -43,7 +43,7 @@ async function s3DeleteDir(params) {
 }
 
 const params = {
-  Bucket: process.env.S3_UPLOAD_BUCKET,
+  Bucket: process.env.S3_TEMPORAL_BUCKET,
   Prefix: process.env.S3_TEMPORAL_PREFIX
 }
 
