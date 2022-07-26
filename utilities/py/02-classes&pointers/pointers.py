@@ -19,9 +19,6 @@ print("\nnum1 points to:", id(num1))
 print("num2 points to:", id(num2))
 
 
-#####################################
-
-
 dict1 = {
     'value': 11
 }
